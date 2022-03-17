@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-import * as S from "./styles";
+import * as S from "./styled";
 
 interface RecipeProps {
   id: number;
   title: string;
   image: string;
 }
-export function Veggie() {
+export function SectionVeggie() {
   const [veggie, setVeggie] = useState([]);
 
   useEffect(() => {

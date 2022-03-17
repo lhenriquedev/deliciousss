@@ -1,11 +1,11 @@
-import { Popular } from "../components/Popular/Popular";
-import { Veggie } from "../components/Veggie/Veggie";
+import { SectionPopular } from "../components/SectionPopular/SectionPopular";
+import { SectionVeggie } from "../components/SectionVeggie/SectionVeggie";
 
 export function Home() {
   return (
     <>
-      <Veggie />
-      <Popular />
+      <SectionVeggie />
+      <SectionPopular />
     </>
   );
 }

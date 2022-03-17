@@ -1,4 +1,4 @@
-import { Category } from "./components/Category/Category";
+import { HeaderCategory } from "./components/HeaderCategory/HeaderCategory";
 import { Pages } from "./pages/Pages";
 import GlobalStyle from "./styles/globalStyles";
 
@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <Category />
+      <HeaderCategory />
       <Pages />
       <GlobalStyle />
     </BrowserRouter>
