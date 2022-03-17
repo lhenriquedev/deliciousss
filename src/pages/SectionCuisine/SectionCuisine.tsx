@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "./styled";
 
 interface CuisineProps {
   id: number;
@@ -11,7 +11,7 @@ interface CuisineProps {
   cuisineName: string;
 }
 
-function Cuisine() {
+export function SectionCuisine() {
   const [cuisine, setCuisine] = useState<CuisineProps[]>([]);
   const { type } = useParams<{ type: string }>();
 
@@ -43,5 +43,3 @@ function Cuisine() {
     </S.Grid>
   );
 }
-
-export default Cuisine;

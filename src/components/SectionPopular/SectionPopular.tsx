@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-import * as S from "./styles";
+import * as S from "./styled";
 
 interface RecipeProps {
   id: number;
@@ -11,7 +11,7 @@ interface RecipeProps {
   image: string;
 }
 
-export function Popular() {
+export function SectionPopular() {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
