@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   }
 `;
 export const Container = styled.div`
-  max-width: 110rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 `;
@@ -34,9 +34,10 @@ export const Card = styled.div`
   figcaption {
     position: absolute;
     left: 50%;
-    bottom: 18%;
+    bottom: 0%;
     transform: translate(-50%, 0%);
     z-index: 10;
+    padding: 1rem;
 
     width: 100%;
     height: fit-content;
@@ -53,5 +54,5 @@ export const Gradient = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 `;

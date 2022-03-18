@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -16,7 +15,7 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const Grid = styled(motion.div)`
+export const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;

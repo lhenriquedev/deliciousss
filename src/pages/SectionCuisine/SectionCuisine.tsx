@@ -22,7 +22,7 @@ export function SectionCuisine() {
 
     const recipes = await data.json();
     console.log(recipes);
-    // setCuisine(recipes.results);
+    setCuisine(recipes.results);
   }
 
   useEffect(() => {
@@ -31,15 +31,26 @@ export function SectionCuisine() {
   }, [type]);
 
   return (
-    <S.Grid>
-      {cuisine.map((item) => {
-        return (
-          <S.Card key={item.id}>
-            <img src={item.image} alt={item.title} />
-            <h4>{item.title}</h4>
-          </S.Card>
-        );
-      })}
-    </S.Grid>
+    <S.Wrapper>
+      <S.Container>
+        <S.Grid
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {cuisine.map((item) => {
+            return (
+              <Link to={`/recipe/${item.id}`}>
+                <S.Card key={item.id}>
+                  <img src={item.image} alt={item.title} />
+                  <figcaption>{item.title}</figcaption>
+                </S.Card>
+              </Link>
+            );
+          })}
+        </S.Grid>
+      </S.Container>
+    </S.Wrapper>
   );
 }

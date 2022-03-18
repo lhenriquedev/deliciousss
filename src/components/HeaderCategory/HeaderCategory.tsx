@@ -10,31 +10,31 @@ export function HeaderCategory() {
     <S.Wrapper>
       <S.Container>
         <ul>
-          <NavLink to={"/cuisine/Italian"}>
-            <li>
+          <li>
+            <S.Link to={"/cuisine/Italian"}>
               <FaPizzaSlice />
               <h4>Italian</h4>
-            </li>
-          </NavLink>
+            </S.Link>
+          </li>
 
-          <NavLink to={"/cuisine/American"}>
-            <li>
+          <li>
+            <S.Link to={"/cuisine/American"}>
               <FaHamburger />
               <h4>American</h4>
-            </li>
-          </NavLink>
-          <NavLink to={"/cuisine/Thai"}>
-            <li>
+            </S.Link>
+          </li>
+          <li>
+            <S.Link to={"/cuisine/Thai"}>
               <GiNoodles />
               <h4>Thai</h4>
-            </li>
-          </NavLink>
-          <NavLink to={"/cuisine/Japanese"}>
-            <li>
+            </S.Link>
+          </li>
+          <li>
+            <S.Link to={"/cuisine/Japanese"}>
               <GiChopsticks />
               <h4>Japanese</h4>
-            </li>
-          </NavLink>
+            </S.Link>
+          </li>
         </ul>
       </S.Container>
     </S.Wrapper>

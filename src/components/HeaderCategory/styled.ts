@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -17,28 +18,48 @@ export const Container = styled.div`
   ul {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
 
     list-style: none;
+  }
 
-    li {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  li {
+    display: inline-block;
+  }
+`;
 
-      padding: 2rem;
+export const Link = styled(NavLink)`
+  text-decoration: none;
+  background: linear-gradient(35deg, #494949, #313131);
+  cursor: pointer;
+  transform: scale(0.8);
+  width: 8rem;
+  height: 8rem;
+  padding: 1rem;
 
-      &:not(:last-child) {
-        margin-right: 2rem;
-      }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 
-      svg {
-        font-size: 3.2rem;
-      }
-      h4 {
-        margin-top: 1rem;
-        font-size: 1.6rem;
-      }
+  svg {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  &.active {
+    background: linear-gradient(to right, #f27121, #e94057);
+
+    svg,
+    h4 {
+      color: #fff;
     }
   }
 `;

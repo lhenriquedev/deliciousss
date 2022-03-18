@@ -32,12 +32,19 @@ export const Card = styled.div`
     object-fit: cover;
   }
 
+  figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   figcaption {
     position: absolute;
     left: 50%;
-    bottom: 18%;
+    bottom: 0%;
     transform: translate(-50%, 0%);
     z-index: 10;
+    padding: 1rem;
 
     width: 100%;
     height: fit-content;

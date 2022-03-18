@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
@@ -53,11 +55,11 @@ export function SectionPopular() {
               return (
                 <SplideSlide key={recipe.id}>
                   <S.Card>
-                    <figure>
+                    <Link to={`/recipe/${recipe.id}`}>
                       <img src={recipe.image} alt={recipe.title} />
                       <figcaption>{recipe.title}</figcaption>
-                    </figure>
-                    <S.Gradient />
+                      <S.Gradient />
+                    </Link>
                   </S.Card>
                 </SplideSlide>
               );
