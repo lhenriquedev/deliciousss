@@ -1,7 +1,13 @@
 // globalStyles.ts
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+interface Props {
+  theme: {
+    body: string;
+  };
+}
+
+const GlobalStyle = createGlobalStyle<Props>`
   * {
     margin: 0;
     padding: 0;
@@ -13,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
+    background: ${({ theme }) => theme.body};
     font-family: 'Inter', Helvetica, Sans-Serif;
     font-weight: 400;
   }

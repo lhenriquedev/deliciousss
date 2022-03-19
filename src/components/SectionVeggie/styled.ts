@@ -7,10 +7,11 @@ export const Wrapper = styled.div`
     font-size: 2rem;
     color: #444;
     margin-bottom: 1.6rem;
+    color: ${(props) => props.theme.fontColor};
   }
 `;
 export const Container = styled.div`
-  max-width: 140rem;
+  max-width: 110rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 `;

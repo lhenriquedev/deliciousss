@@ -8,38 +8,34 @@ import { Pages } from "./pages/Pages";
 import { HeaderCategory } from "./components/HeaderCategory/HeaderCategory";
 import { SearchBox } from "./components/SearchBox/SearchBox";
 
-const Logo = styled(Link)`
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "Lobster Two", cursive;
-`;
+// Dark theme stuffs
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./theme/theme";
+import { useState } from "react";
 
-const Nav = styled.nav`
-  max-width: 110rem;
-  margin: 0 auto;
-  padding: 4rem 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  svg {
-    font-size: 2rem;
-  }
-`;
+import * as S from "./styled";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  function handleTheme() {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  }
+
   return (
-    <BrowserRouter>
-      <Nav>
-        <GiKnifeFork />
-        <Logo to={"/"}>deliciousss</Logo>
-      </Nav>
-      <SearchBox />
-      <HeaderCategory />
-      <Pages />
-      <GlobalStyle />
-    </BrowserRouter>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <BrowserRouter>
+        <GlobalStyle />
+        <S.Nav>
+          <GiKnifeFork />
+          <S.Logo to={"/"}>deliciousss</S.Logo>
+          <button onClick={handleTheme}>Switch Theme</button>
+        </S.Nav>
+        <SearchBox />
+        <HeaderCategory />
+        <Pages />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

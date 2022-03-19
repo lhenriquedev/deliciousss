@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
 
   h2 {
     font-size: 2rem;
-    color: #444;
     margin-bottom: 1.6rem;
+    color: ${(props) => props.theme.fontColor};
   }
 `;
 

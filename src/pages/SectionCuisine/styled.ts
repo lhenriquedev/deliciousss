@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     font-size: 2rem;
     color: #444;
     margin-bottom: 1.6rem;
+    color: ${(props) => props.theme.fontColor};
   }
 `;
 

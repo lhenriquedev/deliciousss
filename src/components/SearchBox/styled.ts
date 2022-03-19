@@ -20,6 +20,10 @@ export const Form = styled.form`
     font-size: 1.6rem;
     padding: 1.2rem 3.2rem;
     outline: none;
+
+    &::placeholder {
+      color: ${(props) => props.theme.fontColor};
+    }
   }
 
   svg {
@@ -27,7 +31,8 @@ export const Form = styled.form`
     top: 50%;
     left: -0.8%;
     transform: translate(100%, -50%);
-    color: #313131;
+
+    color: ${(props) => props.theme.fontColor};
 
     font-size: 1.6rem;
   }
