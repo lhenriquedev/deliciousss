@@ -1,6 +1,7 @@
 export const lightTheme = {
   body: "#FFF",
   fontColor: "#121212",
+  borderColor: "#121212",
 };
 export const darkTheme = {
   body: "#121212",

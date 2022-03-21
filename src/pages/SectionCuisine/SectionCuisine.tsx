@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 
 import * as S from "./styled";
@@ -21,7 +20,6 @@ export function SectionCuisine() {
     );
 
     const recipes = await data.json();
-    console.log(recipes);
     setCuisine(recipes.results);
   }
 

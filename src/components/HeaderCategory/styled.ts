@@ -31,27 +31,30 @@ export const Container = styled.div`
 
 export const Link = styled(NavLink)`
   text-decoration: none;
-  background: linear-gradient(35deg, #494949, #313131);
+  /*  background: linear-gradient(35deg, #494949, #313131); */
   cursor: pointer;
   transform: scale(0.8);
   width: 8rem;
   height: 8rem;
   padding: 1rem;
 
+  border-radius: 50%;
+  border: 2px solid ${(props) => props.theme.borderColor};
+  color: ${(props) => props.theme.fontColor};
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
 
   svg {
-    color: #fff;
+    // color: #fff;
     font-size: 2rem;
     margin-bottom: 1rem;
   }
   h4 {
     font-size: 1.2rem;
-    color: #fff;
+    // color: #fff;
   }
 
   &.active {
