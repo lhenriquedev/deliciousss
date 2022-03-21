@@ -1,6 +1,5 @@
-import styled from "styled-components";
-
-import { BrowserRouter, Link } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import { GiKnifeFork } from "react-icons/gi";
 import GlobalStyle from "./styles/globalStyles";
 
@@ -11,9 +10,10 @@ import { SearchBox } from "./components/SearchBox/SearchBox";
 // Dark theme stuffs
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/theme";
-import { useState } from "react";
+import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 
 import * as S from "./styled";
+import { ToggleTheme } from "./components/ToggleTheme/ToggleTheme";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -27,9 +27,17 @@ function App() {
       <BrowserRouter>
         <GlobalStyle />
         <S.Nav>
-          <GiKnifeFork />
-          <S.Logo to={"/"}>deliciousss</S.Logo>
-          <button onClick={handleTheme}>Switch Theme</button>
+          <S.LogoContainer>
+            <GiKnifeFork size={30} />
+            <S.Logo to={"/"}>deliciousss</S.Logo>
+          </S.LogoContainer>
+          <ToggleTheme handleTheme={handleTheme}>
+            {theme === "light" ? (
+              <HiOutlineMoon size={30} />
+            ) : (
+              <HiOutlineSun size={30} />
+            )}
+          </ToggleTheme>
         </S.Nav>
         <SearchBox />
         <HeaderCategory />

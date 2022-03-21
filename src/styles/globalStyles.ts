@@ -19,7 +19,9 @@ const GlobalStyle = createGlobalStyle<Props>`
   }
   
   body {
-    background: ${({ theme }) => theme.body};
+    background-color: ${({ theme }) => theme.body};
+    transition: background-color .3s linear;
+    
     font-family: 'Inter', Helvetica, Sans-Serif;
     font-weight: 400;
   }
