@@ -8,12 +8,13 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   position: relative;
-  margin: 10rem 20rem 0;
+  max-width: 65rem;
+  margin: 3.2rem auto;
 
   input {
     width: 100%;
     background: transparent;
-    border: 2px solid #ccc;
+    border: 2px solid ${(props) => props.theme.fontColor};
     border-radius: 1rem;
     color: #313131;
 

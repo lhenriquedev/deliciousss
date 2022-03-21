@@ -17,52 +17,37 @@ export const Container = styled.div`
 
   ul {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1.6rem;
-
-    list-style: none;
-  }
-
-  li {
-    display: inline-block;
+    justify-content: center;
+    gap: 3.2rem;
   }
 `;
 
 export const Link = styled(NavLink)`
-  text-decoration: none;
-  /*  background: linear-gradient(35deg, #494949, #313131); */
-  cursor: pointer;
-  transform: scale(0.8);
-  width: 8rem;
-  height: 8rem;
-  padding: 1rem;
-
-  border-radius: 50%;
-  border: 2px solid ${(props) => props.theme.borderColor};
-  color: ${(props) => props.theme.fontColor};
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 1rem;
 
-  svg {
-    // color: #fff;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  h4 {
-    font-size: 1.2rem;
-    // color: #fff;
-  }
+  text-decoration: none;
 
-  &.active {
-    background: linear-gradient(to right, #f27121, #e94057);
+  font-size: 1.6rem;
+  font-weight: 700;
 
-    svg,
-    h4 {
-      color: #fff;
+  img {
+    width: 100%;
+    object-fit: cover;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    filter: brightness(0.9);
+    overflow: hidden;
+
+    transition: filter 0.2s ease-in;
+
+    &:hover {
+      filter: brightness(0.8);
     }
   }
+  color: ${(props) => props.theme.fontColor};
 `;

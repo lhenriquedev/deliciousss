@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 export const Wrapper = styled.div`
   margin: 4rem auto 0;
 
@@ -29,10 +35,6 @@ export const Card = styled.figure`
     border-radius: 2rem;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   figcaption {
     padding: 1rem;
 
@@ -41,6 +43,6 @@ export const Card = styled.figure`
     font-weight: 600;
 
     text-align: center;
-    color: #444;
+    color: ${(props) => props.theme.fontColor};
   }
 `;

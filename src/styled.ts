@@ -14,7 +14,7 @@ export const Logo = styled(Link)`
 export const Nav = styled.nav`
   max-width: 110rem;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 4rem 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

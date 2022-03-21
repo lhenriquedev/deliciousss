@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import * as S from "./styled";
 
@@ -34,12 +34,12 @@ export function SectionSearched() {
         <S.Grid>
           {searchedRecipes.map((item) => {
             return (
-              <Link to={`/recipe/${item.id}`}>
-                <S.Card key={item.id}>
+              <S.StyledLink to={`/recipe/${item.id}`} key={item.id}>
+                <S.Card>
                   <img src={item.image} alt={item.title} />
                   <figcaption>{item.title}</figcaption>
                 </S.Card>
-              </Link>
+              </S.StyledLink>
             );
           })}
         </S.Grid>

@@ -25,7 +25,6 @@ export function RecipeDetails() {
     );
     const detailData = await data.json();
     setDetails(detailData);
-    console.log(detailData);
   }
 
   useEffect(() => {
@@ -34,10 +33,10 @@ export function RecipeDetails() {
 
   return (
     <S.Wrapper>
-      <div>
+      <S.TitleContainer>
         <h2>{details.title}</h2>
         <img src={details.image} alt="" />
-      </div>
+      </S.TitleContainer>
 
       <S.Info>
         <S.Button
@@ -54,16 +53,23 @@ export function RecipeDetails() {
         </S.Button>
 
         {activeTab === "instructions" && (
-          <div>
-            <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-            <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
-          </div>
+          <>
+            <div className="summary-container">
+              <h3>Summary:</h3>
+              <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
+            </div>
+
+            <div className="instructions-container">
+              <h3>Instructions:</h3>
+              <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
+            </div>
+          </>
         )}
 
         {activeTab === "ingredients" && (
-          <ul>
+          <ul className="list-ingredients">
             {details.extendedIngredients.map((ingredient: any) => (
-              <li>{ingredient.original}</li>
+              <li key={ingredient.id}>{ingredient.original}</li>
             ))}
           </ul>
         )}
