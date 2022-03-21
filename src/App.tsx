@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 import { GiKnifeFork } from "react-icons/gi";
 import GlobalStyle from "./styles/globalStyles";
 
@@ -8,12 +9,11 @@ import { HeaderCategory } from "./components/HeaderCategory/HeaderCategory";
 import { SearchBox } from "./components/SearchBox/SearchBox";
 
 // Dark theme stuffs
-import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/theme";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
+import { ToggleTheme } from "./components/ToggleTheme/ToggleTheme";
 
 import * as S from "./styled";
-import { ToggleTheme } from "./components/ToggleTheme/ToggleTheme";
 
 function App() {
   const [theme, setTheme] = useState("light");
